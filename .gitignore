@@ -1,4 +1,7 @@
 .DS_Store
+OLD/
+music/
+*.zip
 
 # Logs
 logs
