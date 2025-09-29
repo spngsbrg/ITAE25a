@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Code w. JS</title>
+  </head>
+  <body>
+    <div id="persons"></div>
+    <script>
+      const person = {
+        name: "Thomas",
+        age: 41,
+        height: 170,
+        sayHello: function (name) {
+          console.log("Hello " + name + ", nice to meet you!");
+          document.write(
+            "<div class='greeting'> Hello " + name + ", nice to meet you!</div>"
+          );
+        },
+      };
+
+      const person0 = {
+        name: "Thomas",
+        age: 41,
+        height: 170,
+      };
+
+      const person1 = {
+        name: "Hans",
+        age: 43,
+        height: 180,
+      };
+      const person2 = {
+        name: "Boris",
+        age: 25,
+        height: 168,
+      };
+      const person3 = {
+        name: "Halfdan",
+        age: 52,
+        height: 195,
+      };
+      const person4 = {
+        name: "Ingrid",
+        age: 38,
+        height: 165,
+      };
+
+      document.write("<p>");
+      document.write(person.name);
+      document.write(" ");
+      document.write(person.age + 1);
+      document.write(" ");
+      person.age = person.age + 1;
+      //person.age ++;
+      document.write(person.age);
+      //NEJ:
+      //person = "Thomas";
+
+      //JA:
+      person.name = "Thom@s";
+      document.write(" ");
+      document.write(person.name);
+      document.write("</p>");
+
+      person.sayHello("Hans");
+
+      let personsArray = [person0, person1, person2, person3, person4];
+
+      let personsDiv = document.getElementById("persons");
+
+      let personsHTML = "";
+
+      for (let i = 0; i < personsArray.length; i++) {
+        personsHTML += "<div>" + personsArray[i].name + "</div>";
+      }
+      console.log(personsDiv);
+      console.log(personsHTML);
+      personsDiv.innerHTML = personsHTML;
+    </script>
+  </body>
+</html>

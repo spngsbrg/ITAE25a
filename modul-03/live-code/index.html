@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .orange {
+        color: orange;
+        font-family: fantasy;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="mainHeading" class="orange">Hello World!</h1>
+    <div id="mainContent"></div>
+    <div id="click-txt"></div>
+    <button
+      onclick="document.getElementById('click-txt').innerHTML='You clicked the button! Hurray!'"
+    >
+      Click me!
+    </button>
+
+    <button
+      onclick="document.getElementById('mainHeading').style.color = 'cyan'"
+    >
+      Change color
+    </button>
+    <script>
+      document.getElementsByClassName("orange")[0].style.color = "blue";
+      let mainContent = document.getElementById("mainContent");
+
+      let h2Element = document.createElement("h2");
+      let pElement = document.createElement("p");
+      let pElement1 = document.createElement("p");
+      let pElement2 = document.createElement("p");
+      let pElement3 = document.createElement("p");
+
+      h2Element.innerHTML = "Dette er et h2-element tilføjet med JS";
+      pElement.innerHTML =
+        "Dette er et <strong>p-element</strong> tilføjet med JS";
+      pElement1.innerText =
+        "Dette er et <strong>p-element</strong> tilføjet med JS";
+      pElement2.innerHTML = "Dette er et p-element tilføjet med JS";
+      pElement3.innerHTML = "Dette er et p-element tilføjet med JS";
+
+      mainContent.appendChild(h2Element);
+      mainContent.appendChild(pElement);
+      mainContent.appendChild(pElement1);
+      mainContent.appendChild(pElement2);
+      mainContent.appendChild(pElement3);
+
+      h2Element.className = "orange";
+
+      h2Element.id = "heading2";
+      pElement.className = "paragraph";
+      pElement1.className = "paragraph";
+      pElement2.className = "paragraph";
+      pElement3.className = "paragraph";
+
+      let paragraphs = document.querySelectorAll(".paragraph");
+
+      console.log(paragraphs);
+    </script>
+  </body>
+</html>

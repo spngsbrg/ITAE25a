@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript: Intro</title>
+    <style>
+      .heading {
+        color: rgb(128, 128, 128);
+        font-size: xx-large;
+        font-family: sans-serif;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript: Intro</h1>
+
+    <script>
+      const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      let today = new Date();
+      console.log(today);
+      let todaysDay = weekday[today.getDay()];
+
+      //Eksperiment med arrays:
+      console.log(weekday[6]);
+      console.log(weekday.length);
+      console.log("Value of first index in array: " + weekday[0]);
+      console.log(
+        "Value of last index in array: " + weekday[weekday.length - 1]
+      );
+
+      let start = "Wednesday";
+      const gravity = 9.7;
+
+      let newGravity = gravity + "h7";
+      //gravity = 9.7;
+      start = 837480723;
+
+      console.log("Page started loading on " + todaysDay);
+      console.log(newGravity);
+      console.log(newGravity / 2);
+
+      document.write("<p>");
+      document.write(gravity);
+      document.write("</p>");
+    </script>
+
+    <h1>Displaying the last modified date</h1>
+
+    <p>This page was last modified on:</p>
+    <script>
+      let lastModified = document.lastModified;
+      document.write("<p>");
+      document.write(lastModified);
+      document.write("</p>");
+    </script>
+
+    <div id="loops">For-loops</div>
+    <script>
+      for (let i = 0; i < weekday.length; i++) {
+        document.write("<p>" + weekday[i] + "</p>");
+      }
+    </script>
+  </body>
+</html>
