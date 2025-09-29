@@ -41,3 +41,16 @@ for (let i = 0; i < 5; i++) {
 console.log(personsArray);
 
 document.getElementById("intro").innerHTML = personsArray[2].introduction();
+
+let element = document.getElementById("main");
+/*
+element.addEventListener("click", function () {
+  alert("Hello World!");
+});
+*/
+
+element.addEventListener("click", myFunction);
+
+function myFunction() {
+  alert("Hello World! from named function");
+}
